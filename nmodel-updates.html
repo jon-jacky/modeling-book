@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+<TITLE>NModel updates</TITLE>
+</HEAD>
+
+<body bgcolor="#ffffff">
+
+<h2>NModel updates</h2>
+
+<p>
+The book 
+<a href="index.html">Model-based Software Testing and Analysis with C#</a> 
+uses the 
+<a href="http://www.codeplex.com/NModel">NModel</a> framework.
+
+<p>
+This page briefly describes updates to NModel that were made after the
+book was published, that provide opportunities to simplify or improve
+the examples in the book.  These updates are included in recent
+releases of NModel and are thoroughly described in the <a
+href="http://www.codeplex.com/NModel/Wiki/View.aspx?title=Model%20Program%20Viewer&referringTitle=Home">online
+documentation</a> (also <a
+href="http://www.codeplex.com/NModel/Wiki/View.aspx?title=Offline%20Test%20Generator&referringTitle=Home">here</a>
+and <a
+href="http://www.codeplex.com/NModel/Wiki/View.aspx?title=Conformance%20Tester&referringTitle=Home">here</a>)
+and in the <a href="nmodel-reference.pdf">Reference Manual</a>.
+
+<p>
+Here are the <a href="mbta-errata.txt">errors</a> we have found in the
+book.  
+
+<hr>
+
+<h3>Factory methods are optional</h3>
+
+<p>
+Releases 1.0.20312.00 and later.
+
+<p>
+Section 6.2.1, pages 99 - 100, explains that a model program must
+provide a factory method, which must be named when a tool is invoked,
+as in the example command on p. 100:
+
+<p>
+<code>mpv /r:NewsReaderUI.dll NewsReader.Factory.Create</code>
+
+<p>
+Factory methods are no longer required for model programs.  If the
+factory method is omitted, invoke the command using the new
+<code>/mp:</code> (model program) option instead:
+
+<p>
+<code>mpv /r:NewsReaderUI.dll /mp:NewsReader</code>
+
+<hr>
+
+<a href="http://staff.washington.edu/jon/">Jonathan Jacky</a>, 
+University of Washington. 
+&nbsp; Revised 14 May 2008
+
+</body>
+</html>

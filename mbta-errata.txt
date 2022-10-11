@@ -1,0 +1,24 @@
+ERRATA  Model-based Software Testing and Analysis with C#
+
+A current version of this document is kept at 
+ http://staff.washington.edu/jon/modeling-book/mbta-errata.txt
+
+Please report any other errors to jon@u.washington.edu
+
+News about updates to NModel that were made after the book was
+published appear at
+  http://staff.washington.edu/jon/modeling-book/nmodel-updates.txt
+
+
+** Chapter 8 **
+
+143, Fig. 8.4, in class Stepper, the declaration of the method
+DoAction appears as
+
+ public Action DoAction(Action action)
+
+it should be
+ 
+ public CompoundTerm DoAction(CompoundTerm action)
+
+This has been corrected in the code in mbta-samples
